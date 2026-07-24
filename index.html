@@ -246,7 +246,7 @@ section.dense { padding: 92px 0; }
 .hero p.deck.deck-emph strong.hi { display: inline-block; margin-top: 2px; }
 .hero p.deck strong { color: var(--ink); font-weight: 400; }  /* 230 requested; Instrument Sans floor is 400 */
 .hero p.deck strong.hi { color: #ffb171; font-weight: 700; letter-spacing: 0.2px; }
-.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-ctas { display: flex; gap: 22px; flex-wrap: wrap; }
 
 .btn {
   display: inline-flex;
@@ -267,6 +267,9 @@ section.dense { padding: 92px 0; }
 .btn-orange:hover { background: #ffa361; border-color: #ffa361; box-shadow: 0 8px 26px -8px rgba(245,145,72,0.6); }
 .btn-outline { background: rgba(255,255,255,0.04); color: var(--ink); border-color: var(--rule-mid); }
 .btn-outline:hover { background: rgba(255,255,255,0.09); border-color: var(--ink); }
+/* hero primary CTA only - heavier + a touch more internal gap */
+.hero-ctas .btn-orange { font-weight: 700; gap: 11px; }
+.hero-ctas .btn-orange .btn-arrow { position: relative; top: 1px; }
 .btn-arrow { font-size: 15px; line-height: 1; display: block; transition: transform 0.18s; }
 .btn:hover .btn-arrow { transform: translateX(3px); }
 
@@ -288,9 +291,19 @@ section.dense { padding: 92px 0; }
   display: flex; align-items: center; justify-content: center;
   padding: 24px 16px; min-height: 90px;
 }
-.vcell img { max-height: 34px; max-width: 100%; width: auto; opacity: 0.85; filter: brightness(1.15); }
-.vcell img.v-avid { filter: brightness(0) invert(1); max-height: 16px; }
-.vcell img.v-ai { max-height: 42px; filter: grayscale(1) brightness(1.55); }
+.vcell img { max-height: 44px; max-width: 88%; width: auto; opacity: 0.85; filter: brightness(1.15); }
+.vcell img.v-avid { filter: brightness(0) invert(1); max-height: 22px; }
+.vcell img.v-ai { filter: grayscale(1) brightness(1.55); }
+/* per-logo heights equalize VISUAL WEIGHT - these marks differ ~7x in ink density,
+   so a shared height reads unbalanced. tuned to equal ink area, clamped. */
+.vcell img[alt="Adobe"]      { max-height: 46px; }
+.vcell img[alt="Apple"]      { max-height: 44px; }
+.vcell img[alt="Avid"]       { max-height: 22px; }
+.vcell img[alt="Blackmagic Design"] { max-height: 50px; }
+.vcell img[alt="Autodesk"]   { max-height: 42px; }
+.vcell img[alt="Maxon"]      { max-height: 43px; }
+.vcell img[alt="NVIDIA"]     { max-height: 40px; }
+.vcell img.v-ai              { max-height: 50px; }
 .vcell.note {
   grid-column: 1 / -1;
   font-family: 'JetBrains Mono', monospace;
@@ -885,7 +898,8 @@ footer p a:hover { color: var(--fmc-orange); }
       </div>
     </div>
     <div class="vgrid">
-      <div class="vcell"><img src="https://www.fmctraining.com/wp-content/uploads/2025/03/courses_logo_adobe-1.png" alt="Adobe"></div>
+      
+      <div class="vcell note">Training on the industry's leading creative tools</div><div class="vcell"><img src="https://www.fmctraining.com/wp-content/uploads/2025/03/courses_logo_adobe-1.png" alt="Adobe"></div>
       <div class="vcell"><img src="https://www.fmctraining.com/wp-content/uploads/2025/03/courses_logo_apple-1.png" alt="Apple"></div>
       <div class="vcell"><img class="v-avid" src="https://cdn.avid.com/avidcom/images/shared/avid-logo-desktop.svg" alt="Avid"></div>
       <div class="vcell"><img src="https://www.fmctraining.com/wp-content/uploads/2025/03/courses_logo_bmd-1.png" alt="Blackmagic Design"></div>
@@ -893,7 +907,6 @@ footer p a:hover { color: var(--fmc-orange); }
       <div class="vcell"><img src="https://www.fmctraining.com/wp-content/uploads/2025/03/courses_logo_maxon-1.png" alt="Maxon"></div>
       <div class="vcell"><img src="https://www.fmctraining.com/wp-content/uploads/2025/03/associate_nvidia.webp" alt="NVIDIA"></div>
       <div class="vcell"><img class="v-ai" src="https://www.fmctraining.com/images/aitraining-logo.webp" alt="AI Training"></div>
-      <div class="vcell note">Training across leading creative platforms</div>
     </div>
   </div></div>
 </section>
