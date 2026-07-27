@@ -11,13 +11,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0A0E18;
-  --bg-soft: #11162A;
-  --bg-card: #1A2038;
-  --bg-deep: #050810;
+  --bg: #262131;         /* FMC purple, from fmctraining.com */
+  --bg-soft: #2E2842;
+  --bg-card: #342C4A;
+  --bg-deep: #1C1826;
 
   --ink: #FFFFFF;
   --ink-muted: #C3CBD9;
@@ -29,9 +29,9 @@
   --fmc-blue-deep: #1B6EC2;
   --fmc-purple: #9978C6;
   --fmc-purple-deep: #6B4E9E;
-  --fmc-orange: #F59148;
-  --fmc-orange-deep: #ED7B1F;
-  --fmc-orange-ink: #C25E0B;  /* darkened for use on light panels - 4.1:1 */
+  --fmc-orange: #3B9DFF;        /* accent = FMC electric blue (text/em) */
+  --fmc-orange-deep: #008CFF;   /* button fill */
+  --fmc-orange-ink: #0b1220;    /* dark ink for text ON the blue button */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -162,7 +162,7 @@ header {
 .lockup-left { display: flex; align-items: center; }
 .lockup-right { display: flex; align-items: center; }
 .lockup-title {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 23px;
   font-weight: 600;
   line-height: 1;
@@ -192,8 +192,8 @@ section.dense { padding: 92px 0; }
 .hero {
   padding: 72px 0 118px;
   background:
-    radial-gradient(ellipse 70% 60% at 30% 30%, rgba(59, 138, 217, 0.14) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(245, 145, 72, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 60% at 30% 28%, rgba(59, 157, 255, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 82% 80%, rgba(0, 140, 255, 0.10) 0%, transparent 60%),
     var(--bg);
 }
 .hero-eyebrow {
@@ -215,9 +215,9 @@ section.dense { padding: 92px 0; }
 @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
 
 .hero h1 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(46px, 5.8vw, 80px);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.02;
   letter-spacing: -0.03em;
   margin-bottom: 26px;
@@ -245,7 +245,7 @@ section.dense { padding: 92px 0; }
 .hero p.deck.deck-emph { font-size: 20px; max-width: 100%; }
 .hero p.deck.deck-emph strong.hi { display: inline-block; margin-top: 2px; }
 .hero p.deck strong { color: var(--ink); font-weight: 400; }  /* 230 requested; Instrument Sans floor is 400 */
-.hero p.deck strong.hi { color: #ffb171; font-weight: 700; letter-spacing: 0.2px; }
+.hero p.deck strong.hi { color: #7CC0FF; font-weight: 700; letter-spacing: 0.2px; }
 .hero-ctas { display: flex; gap: 22px; flex-wrap: wrap; }
 
 .btn {
@@ -263,8 +263,8 @@ section.dense { padding: 92px 0; }
   border: 1px solid transparent;
   cursor: pointer;
 }
-.btn-orange { background: var(--fmc-orange); border-color: var(--fmc-orange); color: #1a0d02; }
-.btn-orange:hover { background: #ffa361; border-color: #ffa361; box-shadow: 0 8px 26px -8px rgba(245,145,72,0.6); }
+.btn-orange { background: var(--fmc-orange-deep); border-color: var(--fmc-orange-deep); color: #fff; }
+.btn-orange:hover { background: #33A0FF; border-color: #33A0FF; box-shadow: 0 8px 26px -8px rgba(0,140,255,0.55); }
 .btn-outline { background: rgba(255,255,255,0.04); color: var(--ink); border-color: var(--rule-mid); }
 .btn-outline:hover { background: rgba(255,255,255,0.09); border-color: var(--ink); }
 /* hero primary CTA only - heavier + a touch more internal gap */
@@ -287,7 +287,7 @@ section.dense { padding: 92px 0; }
   overflow: hidden;
 }
 .vcell {
-  background: #0d1220;
+  background: #1e1a2b;
   display: flex; align-items: center; justify-content: center;
   padding: 24px 16px; min-height: 90px;
 }
@@ -300,7 +300,7 @@ section.dense { padding: 92px 0; }
 .vcell img[alt="Apple"]      { max-height: 44px; }
 .vcell img[alt="Avid"]       { max-height: 22px; }
 .vcell img[alt="Blackmagic Design"] { max-height: 50px; }
-.vcell img[alt="Autodesk"]   { max-height: 42px; }
+.vcell img[alt="Autodesk"]   { max-height: 37px; }
 .vcell img[alt="Maxon"]      { max-height: 43px; }
 .vcell img[alt="NVIDIA"]     { max-height: 40px; }
 .vcell img.v-ai              { max-height: 50px; }
@@ -330,7 +330,7 @@ section.dense { padding: 92px 0; }
 .onestep-inner { max-width: 820px; margin: 0 auto; }
 .onestep .marker-eyebrow { color: var(--fmc-orange); }
 .onestep h2 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(32px, 3.6vw, 46px);
   font-weight: 400;
   line-height: 1.12;
@@ -345,7 +345,7 @@ section.dense { padding: 92px 0; }
 /* Section headers */
 .section-header { max-width: 980px; margin-bottom: 47px; }
 .section-header h2 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(37px, 4.3vw, 52px);
   font-weight: 400;
   line-height: 1.03;
@@ -379,7 +379,7 @@ section.dense { padding: 92px 0; }
   margin-bottom: 20px;
 }
 .aud-headline {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(25px, 2.8vw, 43px);
   font-weight: 700; line-height: 1.1;
   letter-spacing: 0.0em;
@@ -455,7 +455,7 @@ section.dense { padding: 92px 0; }
 .step-card:nth-child(2) .step-num { color: var(--fmc-purple); }
 .step-card:nth-child(3) .step-num { color: var(--fmc-orange); }
 .step-card h3 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 38px;
   font-weight: 588;
   letter-spacing: 0em;
@@ -518,7 +518,7 @@ section.dense { padding: 92px 0; }
 .rev-card.training .rev-earn { color: var(--fmc-blue); }
 .rev-card.conf .rev-earn { color: var(--fmc-purple); }
 .rev-pct {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 107px;
   font-weight: 600;
   line-height: 0.9;
@@ -530,7 +530,7 @@ section.dense { padding: 92px 0; }
 .rev-card.training .rev-pct sup { color: var(--fmc-blue); }
 .rev-card.conf .rev-pct sup { color: var(--fmc-purple); }
 .rev-card h3 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 25px;
   font-weight: 600;
   line-height: 1.2;
@@ -571,7 +571,7 @@ section.dense { padding: 92px 0; }
   margin-bottom: 12px;
 }
 .tier-card h3 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 44px;
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -595,13 +595,13 @@ section.dense { padding: 92px 0; }
 .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 24px; }
 .benefit {
   background: var(--bg-soft);
-  border: 1px solid rgba(245, 145, 72, 0.28);
+  border: 1px solid rgba(0, 140, 255, 0.28);
   border-radius: 6px;
   padding: 42px 34px;
   text-align: center;
 }
 .benefit h4 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 32px;
   font-weight: 660;
   letter-spacing: -0.01em;
@@ -649,7 +649,7 @@ section.dense { padding: 92px 0; }
   height: 65px;
 }
 .guarantee-text h3 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 41px;
   font-weight: 400;
   letter-spacing: -0.025em;
@@ -710,7 +710,7 @@ section.dense { padding: 92px 0; }
 .menu-logo img.logo-aitraining { width: 172px; height: auto; max-width: none; max-height: none; margin-left: 0; }
 .menu-row:hover .menu-logo img { opacity: 1; }
 .menu-logo.text-logo {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 34px;
   font-weight: 600;
   color: #fff;
@@ -720,7 +720,7 @@ section.dense { padding: 92px 0; }
 .menu-row:hover .menu-logo.text-logo { opacity: 1; }
 .menu-content { margin-left: 10px; }
 .menu-content h4 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 27px;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -762,7 +762,7 @@ section.dense { padding: 92px 0; }
 .story-logo-link { display: inline-block; margin-bottom: 34px; }
 .story-logo { height: 63px; width: auto; display: block; }
 .story-text h2 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(34px, 3.6vw, 48px);
   font-weight: 400;
   letter-spacing: -0.025em;
@@ -775,7 +775,7 @@ section.dense { padding: 92px 0; }
 .story-text p strong { color: var(--ink); font-weight: 600; }
 .story-stats { display: grid; grid-template-columns: auto auto; justify-content: start; gap: 64px; margin-top: 40px; padding-top: 36px; border-top: 1px solid var(--rule); }
 .story-stat .n {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 46px;
   font-weight: 600;
   line-height: 1;
@@ -796,7 +796,7 @@ section.dense { padding: 92px 0; }
 /* CTA */
 .cta { background: var(--bg-deep); padding: 130px 0px 140px; text-align: center; }
 .cta h2 {
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(44px, 5.3vw, 52px);
   font-weight: 400;
   letter-spacing: -0.03em;
