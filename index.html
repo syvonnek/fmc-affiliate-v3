@@ -895,6 +895,9 @@ footer p a:hover { color: var(--fmc-orange); }
    keeps all four labels sitting on one line */
 .rate-item:nth-child(n+3) .rate-n { font-size: 32px; letter-spacing: -0.02em; }
 .rate-n span { font-size: 0.6em; }
+/* "Earn" inline prefix on the two percentages (blue). Flex-centered by .rate-n so all
+   four cells stay vertically balanced and the labels sit on one line. */
+.rate-n .rate-earn { font-size: 0.4em; font-weight: 600; color: var(--fmc-orange); letter-spacing: 0; margin-right: 5px; font-family: 'Instrument Sans', sans-serif; }
 .rate-l { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #a8b5d1; }
 .rate-note { text-align: center; font-size: 13px; color: var(--ink-soft); margin-top: 18px; }
 @media (max-width: 760px){
@@ -982,8 +985,8 @@ footer p a:hover { color: var(--fmc-orange); }
 <section class="ratebar">
   <div class="container">
     <div class="rate-rail">
-      <div class="rate-item"><div class="rate-n">40<span>%</span></div><div class="rate-l">Training revenue share</div></div>
-      <div class="rate-item"><div class="rate-n">15<span>%</span></div><div class="rate-l">Conference revenue share</div></div>
+      <div class="rate-item"><div class="rate-n"><span class="rate-earn">Earn</span>40<span>%</span></div><div class="rate-l">Courses revenue share</div></div>
+      <div class="rate-item"><div class="rate-n"><span class="rate-earn">Earn</span>15<span>%</span></div><div class="rate-l">Conference revenue share</div></div>
       <div class="rate-item"><div class="rate-n">No fee</div><div class="rate-l">To join</div></div>
       <div class="rate-item"><div class="rate-n">FMC-managed</div><div class="rate-l">Registration &amp; delivery</div></div>
     </div>
@@ -1043,7 +1046,7 @@ footer p a:hover { color: var(--fmc-orange); }
           <div class="rev-earn">Earn</div>
           <div class="rev-pct">40<sup>%</sup></div>
           <h3>Revenue share on course registrations</h3>
-          <p>Earned on every qualifying training registration you send to FMC, across Adobe, Apple, Avid, NVIDIA, Maxon, Blackmagic, Autodesk, and AI content creation.</p>
+          <p>Earned on every training registration you send to FMC, across Adobe, Apple, Avid, NVIDIA, Maxon, Blackmagic, Autodesk, and AI content creation.</p>
         </div>
       </div>
       <div class="rev-card conf">
