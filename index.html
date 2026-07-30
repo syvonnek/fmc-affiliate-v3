@@ -870,6 +870,27 @@ footer p a:hover { color: var(--fmc-orange); }
 .rate-l { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #a8b5d1; }
 .rate-note { text-align: center; font-size: 13px; color: var(--ink-soft); margin-top: 18px; }
 @media (max-width: 760px){ .rate-rail { grid-template-columns: 1fr 1fr; } .rate-item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)} .rate-item:nth-child(odd){border-left:none} }
+
+/* ===== MOBILE SPACING PASS — tightens desktop-sized padding on small screens.
+   Lives at the end of the sheet so it wins same-specificity cascades. ===== */
+@media (max-width: 600px) {
+  section { padding: 50px 0; }
+  .hero { padding: 40px 0 50px; }
+  .ratebar { padding: 40px 0 34px; }
+  .audience { padding: 52px 0 46px; }   /* was 150px top - dead overlap space */
+  .onestep { padding: 56px 0; }
+  .benefits, .catalog, .story { padding: 54px 0; }
+  .guarantee { padding: 54px 0; }
+  .cta { padding: 58px 0; }
+  .section-header { margin-bottom: 24px; }
+  /* rate band: shrink so "FMC-managed" stops wrapping */
+  .rate-item { padding: 22px 12px; }
+  .rate-n { font-size: 34px; }
+  .rate-item:nth-child(n+3) .rate-n { font-size: 21px; }
+  .rate-note { margin-top: 12px; font-size: 13px; }
+  .onestep h2 { font-size: 32px; margin-bottom: 26px; }
+  .story-stats { gap: 26px; }
+}
 </style>
 
 </head>
