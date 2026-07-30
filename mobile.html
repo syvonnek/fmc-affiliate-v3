@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>FMC Affiliate - accurate mobile preview</title>
+<style>
+  :root{ --w:393; --h:852; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0d0b12;color:#fff;font-family:-apple-system,'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:26px 16px 60px}
+  h1{font-size:19px;font-weight:700;letter-spacing:-.01em;margin-bottom:4px;text-align:center}
+  p.sub{color:#9aa0ad;font-size:13.5px;text-align:center;max-width:560px;margin-bottom:20px;line-height:1.5}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
+  .bar button{font:inherit;font-size:13px;font-weight:600;color:#cfd3db;background:#1c1a24;border:1px solid #33313d;border-radius:999px;padding:9px 16px;cursor:pointer;transition:.15s}
+  .bar button:hover{border-color:#5a5768}
+  .bar button.on{background:#3B9DFF;border-color:#3B9DFF;color:#0b1220}
+  .stage{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .phone{
+    position:relative;
+    width:calc(var(--w) * 1px + 24px);
+    border:12px solid #000;border-radius:44px;
+    box-shadow:0 24px 70px -20px rgba(0,0,0,.8), 0 0 0 2px #2a2833;
+    background:#000;overflow:hidden;
+  }
+  .notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:120px;height:26px;background:#000;border-radius:0 0 16px 16px;z-index:5}
+  iframe{display:block;width:calc(var(--w) * 1px);height:calc(var(--h) * 1px);border:0;background:#1C1826}
+  .dims{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#7a8090}
+  .hint{margin-top:26px;max-width:560px;color:#8a90a0;font-size:12.5px;line-height:1.6;text-align:center;border-top:1px solid #232029;padding-top:18px}
+  .hint b{color:#c9cdd6}
+  a.raw{color:#3B9DFF;text-decoration:none}
+</style>
+</head>
+<body>
+  <h1>Accurate mobile preview</h1>
+  <p class="sub">This is the real page rendered at a true iPhone width &mdash; scroll inside the phone. Proportions match an actual device (no stretched full-page screenshot).</p>
+  <div class="bar">
+    <button data-w="375" data-h="667">iPhone SE &middot; 375</button>
+    <button data-w="390" data-h="844">iPhone 14 &middot; 390</button>
+    <button data-w="393" data-h="852" class="on">iPhone 15/16 &middot; 393</button>
+    <button data-w="430" data-h="932">15 Pro Max &middot; 430</button>
+  </div>
+  <div class="stage">
+    <div class="phone" id="phone">
+      <div class="notch"></div>
+      <iframe id="frame" src="./index.html" title="FMC Affiliate mobile"></iframe>
+    </div>
+    <div class="dims" id="dims">393 &times; 852 CSS px</div>
+  </div>
+  <p class="hint">Want to double-check it yourself with zero doubt? Open <a class="raw" href="./index.html">the live page</a> on your Mac, then in <b>Safari</b>: Develop menu &rarr; <b>Enter Responsive Design Mode</b> (&#8963;&#8984;R) and pick an iPhone up top. Or in <b>Chrome</b>: right-click &rarr; Inspect &rarr; click the phone icon (&#8984;&#8679;M). Both render at the exact same widths shown here.</p>
+<script>
+  var f=document.getElementById('frame'), dims=document.getElementById('dims'), root=document.documentElement;
+  document.querySelectorAll('.bar button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.bar button').forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on');
+      root.style.setProperty('--w', b.dataset.w);
+      root.style.setProperty('--h', b.dataset.h);
+      dims.innerHTML = b.dataset.w + ' &times; ' + b.dataset.h + ' CSS px';
+    });
+  });
+</script>
+</body>
+</html>
