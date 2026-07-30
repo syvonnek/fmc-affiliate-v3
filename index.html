@@ -80,8 +80,8 @@ header {
 .site-nav { display: flex; gap: 40px; align-items: center; }
 .site-nav a { color: var(--ink-muted); font-weight: 400; font-size: 15px; text-decoration: none; transition: color 0.15s; }
 .site-nav a:hover { color: var(--fmc-orange); }
-.site-nav .nav-apply { color: var(--spark); font-weight: 600; display: inline-flex; align-items: center; gap: 7px; }
-.site-nav .nav-apply:hover { color: var(--spark); text-decoration: none; opacity: 0.82; }
+.site-nav .nav-apply { color: var(--spark); font-weight: 600; display: inline-flex; align-items: center; gap: 7px; border-bottom: 1.5px solid transparent; padding-bottom: 1px; }
+.site-nav .nav-apply:hover { color: var(--spark); border-bottom-color: var(--spark); }
 .site-nav .nav-apply .nav-arrow { font-size: 16px; line-height: 1; position: relative; top: 1px; }
 /* Hamburger - hidden on desktop, shown below 900px */
 .nav-toggle {
@@ -189,7 +189,7 @@ section.dense { padding: 92px 0; }
 
 /* Hero */
 .hero {
-  padding: 72px 0 118px;
+  padding: 65px 0 133px;
   background:
     radial-gradient(ellipse 75% 65% at 28% 20%, rgba(59, 157, 255, 0.22) 0%, transparent 62%),
     radial-gradient(ellipse 55% 45% at 85% 10%, rgba(0, 140, 255, 0.12) 0%, transparent 55%),
@@ -202,7 +202,7 @@ section.dense { padding: 92px 0; }
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--spark);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-left: 0;
   position: relative;
   top: 7.5px;
@@ -241,10 +241,10 @@ section.dense { padding: 92px 0; }
   letter-spacing: 0.14px;
 }
 
-.hero p.deck.deck-lead { margin-bottom: 22px; max-width: 100%; text-wrap: balance; }
+.hero p.deck.deck-lead { margin-bottom: 17px; max-width: 100%; text-wrap: balance; }
 .hero p.deck.deck-emph { font-size: 20px; max-width: 100%; margin-bottom: 0; }
 /* Option 03 - accent bar: a glowing blue rule flags the key promise so the eye lands on it */
-.deck-emph-wrap { display: flex; gap: 15px; align-items: stretch; max-width: 660px; margin-bottom: 34px; }
+.deck-emph-wrap { display: flex; gap: 15px; align-items: stretch; max-width: 660px; margin-bottom: 32px; }
 .deck-emph-wrap .emph-bar { width: 4px; flex: none; border-radius: 3px; background: var(--fmc-orange); box-shadow: 0 0 18px 0 rgba(59,157,255,0.55); margin: 1px 0; }
 .deck-emph-wrap .deck-emph { margin-bottom: 0; }
 .hero p.deck.deck-emph strong.hi { display: inline-block; margin-top: 2px; }
@@ -280,7 +280,7 @@ section.dense { padding: 92px 0; }
 /* ---- Hero: copy left, vendor grid right ---- */
 /* align-items:end -> the CTA row (bottom of the copy column) lines up with the
    bottom edge of the vendor-logo grid. Only applies at >1000px (2-col); it stacks below. */
-.hero-split { display: grid; grid-template-columns: 1fr 400px; gap: 72px; align-items: end; }
+.hero-split { display: grid; grid-template-columns: 1fr 375px; gap: 72px; align-items: end; }
 .hero-copy h1 { font-size: clamp(40px, 4.6vw, 66px); }
 .hero-copy .deck { font-size: 19px; }
 .vgrid {
@@ -291,25 +291,28 @@ section.dense { padding: 92px 0; }
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 16px;
   overflow: hidden;
+  position: relative;
+  top: 12px;              /* bottom sits slightly below the CTA row */
 }
 .vcell {
   background: #1e1a2b;
   display: flex; align-items: center; justify-content: center;
-  padding: 24px 16px; min-height: 90px;
+  padding: 23px 16px; min-height: 80px;
 }
-.vcell img { max-height: 44px; max-width: 88%; width: auto; opacity: 0.85; filter: brightness(1.15); }
-.vcell img.v-avid { filter: brightness(0) invert(1); max-height: 22px; }
+.vcell img { max-height: 40px; max-width: 84%; width: auto; opacity: 0.82; filter: brightness(1.15); }
+.vcell img.v-avid { filter: brightness(0) invert(1); max-height: 20px; }
 .vcell img.v-ai { filter: grayscale(1) brightness(1.55); }
 /* per-logo heights equalize VISUAL WEIGHT - these marks differ ~7x in ink density,
-   so a shared height reads unbalanced. tuned to equal ink area, clamped. */
-.vcell img[alt="Adobe"]      { max-height: 46px; }
-.vcell img[alt="Apple"]      { max-height: 44px; }
-.vcell img[alt="Avid"]       { max-height: 22px; }
-.vcell img[alt="Blackmagic Design"] { max-height: 50px; }
-.vcell img[alt="Autodesk"]   { max-height: 37px; }
-.vcell img[alt="Maxon"]      { max-height: 43px; }
-.vcell img[alt="NVIDIA"]     { max-height: 40px; }
-.vcell img.v-ai              { max-height: 50px; }
+   so a shared height reads unbalanced. tuned to equal ink area, clamped.
+   Scaled down ~10% to make the chart subtler in the hero. */
+.vcell img[alt="Adobe"]      { max-height: 41px; }
+.vcell img[alt="Apple"]      { max-height: 40px; }
+.vcell img[alt="Avid"]       { max-height: 20px; }
+.vcell img[alt="Blackmagic Design"] { max-height: 45px; }
+.vcell img[alt="Autodesk"]   { max-height: 33px; }
+.vcell img[alt="Maxon"]      { max-height: 39px; }
+.vcell img[alt="NVIDIA"]     { max-height: 36px; }
+.vcell img.v-ai              { max-height: 45px; }
 .vcell.note {
   grid-column: 1 / -1;
   font-family: 'JetBrains Mono', monospace;
@@ -328,7 +331,7 @@ section.dense { padding: 92px 0; }
 }
 @media (max-width: 1000px) {
   .hero-split { grid-template-columns: 1fr; gap: 48px; }
-  .vgrid { max-width: 420px; }
+  .vgrid { max-width: 420px; top: 0; }
 }
 
 /* Getting-started single step */
