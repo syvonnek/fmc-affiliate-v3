@@ -558,6 +558,16 @@ section.dense { padding: 92px 0; }
   .rev-card h3 { font-size: 22px; }
   .rev-earn { font-size: 16px; }
 }
+/* Reinstated "You earn" cards - both use the single accent blue (not the old blue/purple split)
+   to match this page's unified color. Shorter min-height since the copy is ~3 lines. */
+.economics .rev-card.training,
+.economics .rev-card.conf { border-top-color: var(--fmc-orange); background: linear-gradient(180deg, rgba(59,157,255,0.08) 0%, transparent 60%), var(--bg-card); }
+.economics .rev-card.training .rev-band,
+.economics .rev-card.conf .rev-band { background: rgba(59,157,255,0.13); }
+.economics .rev-card.training .rev-band span, .economics .rev-card.conf .rev-band span,
+.economics .rev-card.training .rev-earn, .economics .rev-card.conf .rev-earn,
+.economics .rev-card.training .rev-pct sup, .economics .rev-card.conf .rev-pct sup { color: var(--fmc-orange); }
+.economics .rev-card p { min-height: calc(1.5em * 3); }
 
 /* Tiers */
 .tiers { background: var(--bg-soft); }
@@ -961,8 +971,8 @@ footer p a:hover { color: var(--fmc-orange); }
 <section class="ratebar">
   <div class="container">
     <div class="rate-rail">
-      <div class="rate-item"><div class="rate-n">40<span>%</span></div><div class="rate-l">Training referral rate</div></div>
-      <div class="rate-item"><div class="rate-n">15<span>%</span></div><div class="rate-l">Conference referral rate</div></div>
+      <div class="rate-item"><div class="rate-n">40<span>%</span></div><div class="rate-l">Training revenue share</div></div>
+      <div class="rate-item"><div class="rate-n">15<span>%</span></div><div class="rate-l">Conference revenue share</div></div>
       <div class="rate-item"><div class="rate-n">No fee</div><div class="rate-l">To join</div></div>
       <div class="rate-item"><div class="rate-n">FMC-managed</div><div class="rate-l">Registration &amp; delivery</div></div>
     </div>
@@ -1004,6 +1014,33 @@ footer p a:hover { color: var(--fmc-orange); }
         <div class="step-num">Step 3</div>
         <h3>You earn</h3>
         <p>on every qualifying<br>registration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU EARN -->
+<section class="economics">
+  <div class="container">
+    <div class="section-header">
+      <h2>What you earn <em>on every enrollment.</em></h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card training">
+        <div class="rev-band"><span>Training revenue share</span></div>
+        <div class="rev-body">
+          <div class="rev-earn">You earn</div>
+          <div class="rev-pct">40<sup>%</sup></div>
+          <p>on every qualifying training registration you send to FMC. FMC handles enrollment, payment, instruction, and delivery start to finish.</p>
+        </div>
+      </div>
+      <div class="rev-card conf">
+        <div class="rev-band"><span>Conference revenue share</span></div>
+        <div class="rev-body">
+          <div class="rev-earn">You earn</div>
+          <div class="rev-pct">15<sup>%</sup></div>
+          <p>on every conference registration you send, including Post|Production World and FMC's industry summits.</p>
+        </div>
       </div>
     </div>
   </div>
