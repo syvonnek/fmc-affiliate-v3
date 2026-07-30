@@ -218,7 +218,7 @@ section.dense { padding: 92px 0; }
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(46px, 5.8vw, 80px);
   font-weight: 700;
-  line-height: 1.02;
+  line-height: 1.06;
   letter-spacing: -0.03em;
   margin-bottom: 26px;
   color: var(--ink);
@@ -508,7 +508,7 @@ section.dense { padding: 92px 0; }
 .rev-card.conf .rev-band { background: rgba(153, 120, 198, 0.13); }
 .rev-band span {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -541,11 +541,12 @@ section.dense { padding: 92px 0; }
 .rev-card.conf .rev-pct sup { color: var(--fmc-purple); }
 .rev-card h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin-bottom: 14px;
+  margin-top: 10px;
+  margin-bottom: 13px;
   color: var(--ink);
 }
 .rev-card p { font-size: 17px; line-height: 1.59; min-height: calc(1.5em * 4); color: var(--ink-muted); font-weight: 400; letter-spacing: 0.39px; }
@@ -560,6 +561,8 @@ section.dense { padding: 92px 0; }
 }
 /* Reinstated "You earn" cards - both use the single accent blue (not the old blue/purple split)
    to match this page's unified color. Shorter min-height since the copy is ~3 lines. */
+/* let the earn header sit on one line (wider than the default 820px header) */
+.economics .section-header { max-width: none; }
 .economics .rev-card.training,
 .economics .rev-card.conf { border-top-color: var(--fmc-orange); background: linear-gradient(180deg, rgba(59,157,255,0.08) 0%, transparent 60%), var(--bg-card); }
 .economics .rev-card.training .rev-band,
@@ -888,7 +891,7 @@ footer p a:hover { color: var(--fmc-orange); }
    keeps all four labels sitting on one line */
 .rate-item:nth-child(n+3) .rate-n { font-size: 32px; letter-spacing: -0.02em; }
 .rate-n span { font-size: 0.6em; }
-.rate-l { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #a8b5d1; }
+.rate-l { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #a8b5d1; }
 .rate-note { text-align: center; font-size: 13px; color: var(--ink-soft); margin-top: 18px; }
 @media (max-width: 760px){ .rate-rail { grid-template-columns: 1fr 1fr; } .rate-item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.1)} .rate-item:nth-child(odd){border-left:none} }
 
@@ -941,7 +944,7 @@ footer p a:hover { color: var(--fmc-orange); }
     <div class="hero-copy">
       <div class="hero-eyebrow"><span class="pulse"></span>FMC Affiliate Program</div>
       <h1>Grow your training business <em>with FMC.</em></h1>
-      <p class="deck deck-lead">Expand what you offer with FMC's <span class="nb">expert-led</span> training and industry conferences across <span class="nb">post-production</span>, creative technology, and AI.</p>
+      <p class="deck deck-lead">Bring FMC's <span class="nb">expert-led</span> training and industry conferences to your audience, across <span class="nb">post-production</span>, creative technology, and AI.</p>
       <div class="deck-emph-wrap">
         <span class="emph-bar" aria-hidden="true"></span>
         <p class="deck deck-emph">You own the client relationship. <strong class="hi">FMC handles the rest.</strong></p>
@@ -1001,7 +1004,7 @@ footer p a:hover { color: var(--fmc-orange); }
     <div class="steps-grid hiw-grid">
       <div class="step-card">
         <div class="step-num">Step 1</div>
-        <h3>You Refer</h3>
+        <h3>Refer</h3>
         <p>your audience to the FMC programs that fit them.</p>
       </div>
       <div class="step-card">
@@ -1026,7 +1029,7 @@ footer p a:hover { color: var(--fmc-orange); }
     </div>
     <div class="rev-grid">
       <div class="rev-card training">
-        <div class="rev-band"><span>Training</span></div>
+        <div class="rev-band"><span>Courses</span></div>
         <div class="rev-body">
           <div class="rev-earn">Earn</div>
           <div class="rev-pct">40<sup>%</sup></div>
@@ -1086,7 +1089,7 @@ footer p a:hover { color: var(--fmc-orange); }
 <section class="catalog" id="catalog">
   <div class="container">
     <div class="section-header">
-      <h2>Training across the tools and workflows <em>shaping creative work.</em></h2>
+      <h2>Offer training across the tools <em>shaping creative work.</em></h2>
     </div>
     <div class="menu-list">
       <a class="menu-row c-blue" href="https://www.fmctraining.com/adobe" target="_blank" rel="noopener">
