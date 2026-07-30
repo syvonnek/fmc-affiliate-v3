@@ -202,7 +202,7 @@ section.dense { padding: 92px 0; }
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--spark);
-  margin-bottom: 26px;
+  margin-bottom: 30px;
   padding-left: 0;
   position: relative;
   top: 7.5px;
@@ -244,7 +244,7 @@ section.dense { padding: 92px 0; }
 .hero p.deck.deck-lead { margin-bottom: 22px; max-width: 100%; text-wrap: balance; }
 .hero p.deck.deck-emph { font-size: 20px; max-width: 100%; margin-bottom: 0; }
 /* Option 03 - accent bar: a glowing blue rule flags the key promise so the eye lands on it */
-.deck-emph-wrap { display: flex; gap: 15px; align-items: stretch; max-width: 660px; margin-bottom: 40px; }
+.deck-emph-wrap { display: flex; gap: 15px; align-items: stretch; max-width: 660px; margin-bottom: 34px; }
 .deck-emph-wrap .emph-bar { width: 4px; flex: none; border-radius: 3px; background: var(--fmc-orange); box-shadow: 0 0 18px 0 rgba(59,157,255,0.55); margin: 1px 0; }
 .deck-emph-wrap .deck-emph { margin-bottom: 0; }
 .hero p.deck.deck-emph strong.hi { display: inline-block; margin-top: 2px; }
@@ -324,7 +324,7 @@ section.dense { padding: 92px 0; }
   font-size: 16px; font-weight: 700;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--spark);
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 @media (max-width: 1000px) {
   .hero-split { grid-template-columns: 1fr; gap: 48px; }
@@ -332,7 +332,7 @@ section.dense { padding: 92px 0; }
 }
 
 /* Getting-started single step */
-.onestep { text-align: center; background: var(--bg-deep); padding: 104px 0; border-bottom: 1px solid var(--rule); }
+.onestep { text-align: center; background: var(--bg-deep); padding: 150px 0 104px; border-bottom: 1px solid var(--rule); }
 .onestep-inner { max-width: 820px; margin: 0 auto; }
 .onestep .marker-eyebrow { color: var(--spark); }
 .onestep h2 {
@@ -561,8 +561,9 @@ section.dense { padding: 92px 0; }
 }
 /* Reinstated "You earn" cards - both use the single accent blue (not the old blue/purple split)
    to match this page's unified color. Shorter min-height since the copy is ~3 lines. */
-/* let the earn header sit on one line (wider than the default 820px header) */
-.economics .section-header { max-width: none; }
+/* wider headers so the white lead-in stays on line 1 and the blue emphasis lands alone on line 2 */
+.benefits .section-header, .catalog .section-header, .economics .section-header { max-width: none; }
+.economics .section-header { margin-bottom: 56px; }
 .economics .rev-card.training,
 .economics .rev-card.conf { border-top-color: var(--fmc-orange); background: linear-gradient(180deg, rgba(59,157,255,0.08) 0%, transparent 60%), var(--bg-card); }
 .economics .rev-card.training .rev-band,
@@ -889,7 +890,7 @@ footer p a:hover { color: var(--fmc-orange); }
 }
 .rate-item { text-align: center; padding: 26px 18px; border-left: 1px solid rgba(255,255,255,0.10); }
 .rate-item:first-child { border-left: none; }
-.rate-n { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--fmc-orange); margin-bottom: 10px;
+.rate-n { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--fmc-orange); margin-bottom: 8px;
   min-height: 42px; display: flex; align-items: center; justify-content: center; }
 /* words instead of a number - nearly the % size, same weight, and the flex box above
    keeps all four labels sitting on one line */
@@ -985,8 +986,8 @@ footer p a:hover { color: var(--fmc-orange); }
 <section class="ratebar">
   <div class="container">
     <div class="rate-rail">
-      <div class="rate-item"><div class="rate-n"><span class="rate-earn">Earn</span>40<span>%</span></div><div class="rate-l">Courses revenue share</div></div>
-      <div class="rate-item"><div class="rate-n"><span class="rate-earn">Earn</span>15<span>%</span></div><div class="rate-l">Conference revenue share</div></div>
+      <div class="rate-item"><div class="rate-n"><span class="rate-earn">Earn</span>40<span>%</span></div><div class="rate-l">Revenue share on courses</div></div>
+      <div class="rate-item"><div class="rate-n"><span class="rate-earn">Earn</span>15<span>%</span></div><div class="rate-l">Revenue share on conferences</div></div>
       <div class="rate-item"><div class="rate-n">No fee</div><div class="rate-l">To join</div></div>
       <div class="rate-item"><div class="rate-n">FMC-managed</div><div class="rate-l">Registration &amp; delivery</div></div>
     </div>
@@ -1037,7 +1038,7 @@ footer p a:hover { color: var(--fmc-orange); }
 <section class="economics">
   <div class="container">
     <div class="section-header">
-      <h2>What you earn <em>on every enrollment.</em></h2>
+      <h2>What you earn<br><em>on every enrollment.</em></h2>
     </div>
     <div class="rev-grid">
       <div class="rev-card training">
@@ -1066,7 +1067,7 @@ footer p a:hover { color: var(--fmc-orange); }
 <section class="benefits">
   <div class="container">
     <div class="section-header">
-      <h2>Everything you need to <em>grow as an affiliate.</em></h2>
+      <h2>Everything you need to<br><em>grow as an affiliate.</em></h2>
     </div>
     <div class="benefits-grid">
       <div class="benefit">
@@ -1101,7 +1102,7 @@ footer p a:hover { color: var(--fmc-orange); }
 <section class="catalog" id="catalog">
   <div class="container">
     <div class="section-header">
-      <h2>Offer training across the tools <em>shaping creative work.</em></h2>
+      <h2>Offer training across the leading tools<br><em>shaping creative work.</em></h2>
     </div>
     <div class="menu-list">
       <a class="menu-row c-blue" href="https://www.fmctraining.com/adobe" target="_blank" rel="noopener">
