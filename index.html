@@ -324,10 +324,10 @@ section.dense { padding: 92px 0; }
 /* section eyebrow, matches the audience band */
 .marker-eyebrow {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 16px; font-weight: 700;
+  font-size: 18px; font-weight: 700;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--spark);
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 @media (max-width: 1000px) {
   .hero-split { grid-template-columns: 1fr; gap: 48px; }
@@ -378,7 +378,7 @@ section.dense { padding: 92px 0; }
 
 /* ---- Audience band ---- */
 .audience {
-  padding: 104px 0;
+  padding: 152px 0 104px;
   background: var(--bg-deep);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
@@ -386,10 +386,10 @@ section.dense { padding: 92px 0; }
 }
 .aud-eyebrow {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 15px; font-weight: 600;
-  letter-spacing: 0.26em; text-transform: uppercase;
+  font-size: 18px; font-weight: 700;
+  letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--spark);
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 .aud-headline {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -523,9 +523,9 @@ section.dense { padding: 92px 0; }
 .rev-card.training .rev-band span { color: #a8d1f8; }
 .rev-card.conf .rev-band span { color: #d3c0f0; }
 
-.rev-body { padding: 38px 54px 52px; text-align: center; }
+.rev-body { padding: 38px 44px 52px; text-align: center; }
 /* everything centered; a short centered rule separates the stat from the detail */
-.rev-body p { text-align: center; max-width: 360px; margin: 0 auto; }
+.rev-body p { text-align: center; max-width: 520px; margin: 0 auto; text-wrap: wrap; }
 .rev-body .rev-div { width: 66%; height: 1px; background: var(--rule); margin: 22px auto 20px; }
 .rev-earn {
   font-family: 'JetBrains Mono', monospace;
@@ -559,7 +559,7 @@ section.dense { padding: 92px 0; }
   margin-bottom: 13px;
   color: var(--ink);
 }
-.rev-card p { font-size: 17px; line-height: 1.59; min-height: calc(1.5em * 4); color: var(--ink-muted); font-weight: 400; letter-spacing: 0.39px; }
+.rev-card p { font-size: 18px; line-height: 1.4; min-height: calc(1.5em * 4); color: var(--ink-muted); font-weight: 400; letter-spacing: 0.39px; }
 .rev-card p strong { color: var(--ink); font-weight: 550; }
 @media (max-width: 900px) {
   .rev-grid { grid-template-columns: 1fr; }
@@ -659,13 +659,13 @@ section.dense { padding: 92px 0; }
 @media (max-width: 1240px) { .benefits-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 760px) { .benefits-grid { grid-template-columns: 1fr; } }
 /* the reinstated Jeff-reviewed set keeps its original 3-per-row layout */
-.orig-benefits .benefits-grid { grid-template-columns: repeat(3, 1fr); max-width: 1200px; }
+.orig-benefits .benefits-grid { grid-template-columns: repeat(2, 1fr); max-width: 780px; }
 @media (max-width: 1080px) { .orig-benefits .benefits-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 720px) { .orig-benefits .benefits-grid { grid-template-columns: 1fr; } }
 
 /* Guarantee callout */
 .guarantee { background: var(--bg-deep); padding: 104px 0; }
-.guarantee-card { max-width: 620px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 40px 46px 32px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.10); border-top: 3px solid var(--fmc-orange-deep); border-radius: 16px; }
+.guarantee-card { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 40px 46px 32px; background: var(--bg-card); border: 1px solid rgba(255,255,255,0.10); border-top: 3px solid var(--fmc-orange-deep); border-radius: 16px; }
 .guarantee-seal {
   width: 84px;
   height: 84px;
@@ -693,7 +693,7 @@ section.dense { padding: 92px 0; }
 .guarantee-text h3 em { font-style: normal; color: var(--fmc-orange); font-weight: 800; }
 .guarantee-text p { font-size: 16.5px; line-height: 1.55; color: var(--ink-muted); font-weight: 400; max-width: 500px; margin: 0 auto; }
 .guarantee-text p strong { color: var(--ink); font-weight: 550; }
-.guarantee-note { font-size: 11.5px; line-height:1.4; color: var(--ink-soft); font-style: italic; margin-top: 28px; text-align:center; white-space:nowrap; }
+.guarantee-note { font-size: 11px; line-height:1.4; color: var(--ink-soft); font-style: italic; margin-top: 48px; text-align:center; white-space:nowrap; }
 @media(max-width:660px){ .guarantee-note{ white-space:normal; font-size:10.5px; } }
 @media (max-width: 700px) {
   .guarantee-card { grid-template-columns: 1fr; padding: 42px 32px; gap: 28px; }
@@ -809,7 +809,7 @@ section.dense { padding: 92px 0; }
   color: var(--ink);
 }
 .story-text h2 em { font-style: normal; color: var(--fmc-orange); font-weight: 800; }
-.story-text p { font-size: 18px; line-height: 1.6; color: #d9d9d9; margin: 0 auto 18px; font-weight: 400; max-width: 516px; text-wrap: balance; }
+.story-text p { font-size: 18px; line-height: 1.6; color: #d9d9d9; margin: 0 auto 18px; font-weight: 400; max-width: 640px; text-wrap: pretty; }
 .story-text p strong { color: var(--ink); font-weight: 600; }
 .story-stats { display: inline-grid; grid-template-columns: auto auto auto; justify-content: center; gap: 54px; margin-top: 34px; padding-top: 34px; border-top: 1px solid var(--rule); }
 .story-stat .n {
@@ -818,7 +818,8 @@ section.dense { padding: 92px 0; }
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--spark);
+  background: linear-gradient(180deg, #d6f4ff 0%, #6bb8ff 55%, #3b9dff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
   margin-bottom: 8px;
 }
 .story-stat .l {
@@ -1094,7 +1095,7 @@ footer p a:hover { color: var(--fmc-orange); }
         <div class="rev-band"><span>Courses</span></div>
         <div class="rev-body">
           <div class="rev-pct">40<sup>%</sup></div>
-          <h3>On course registrations</h3>
+          <h3>on course registrations</h3>
           <div class="rev-div"></div>
           <p>Earned on training registrations you send to FMC, across Adobe, Apple, Avid, NVIDIA, Maxon, Blackmagic, Autodesk, and AI content creation.</p>
         </div>
@@ -1103,7 +1104,7 @@ footer p a:hover { color: var(--fmc-orange); }
         <div class="rev-band"><span>Conferences</span></div>
         <div class="rev-body">
           <div class="rev-pct">15<sup>%</sup></div>
-          <h3>On conference registrations</h3>
+          <h3>on conference registrations</h3>
           <div class="rev-div"></div>
           <p>Earned on conference registrations you send, including Post|Production World, AI Creative Summit, Immersive Media Summit, and the InfoComm ProVideo Summit.</p>
         </div>
@@ -1151,30 +1152,13 @@ footer p a:hover { color: var(--fmc-orange); }
 <!-- ORIGINAL BENEFIT CARDS - THE VERSION JEFF REVIEWED (before Jordan's changes) -->
 <section class="benefits orig-benefits">
   <div class="container">
-    <div class="alt-flag" style="color:#8fbfff;border-color:rgba(59,157,255,.4)">Original cards &mdash; the version Jeff reviewed (before Jordan)</div>
     <div class="section-header">
       <h2>Everything you need to <em>grow as an affiliate.</em></h2>
     </div>
     <div class="benefits-grid">
       <div class="benefit">
-        <h4>Referral<br><em>earnings</em></h4>
-        <p>Earn 40% on qualifying training and 15% on conferences you refer.</p>
-      </div>
-      <div class="benefit">
-        <h4>Simple<br><em>referral process</em></h4>
-        <p>Share FMC programs with your audience. FMC handles enrollment, payment, and everything after the referral.</p>
-      </div>
-      <div class="benefit">
-        <h4>End-to-end<br><em>delivery</em></h4>
-        <p>FMC manages registration, scheduling, instruction, course delivery, and participant support.</p>
-      </div>
-      <div class="benefit">
         <h4>Marketing-ready<br><em>materials</em></h4>
         <p>Approved course descriptions, graphics, email copy, and marketing resources, ready to use.</p>
-      </div>
-      <div class="benefit">
-        <h4>Co-branded<br><em>support</em></h4>
-        <p>Extend the FMC offering to your audience through approved affiliate materials and co-branded experiences.</p>
       </div>
       <div class="benefit">
         <h4>Dedicated<br><em>affiliate guidance</em></h4>
