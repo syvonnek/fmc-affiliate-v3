@@ -523,8 +523,9 @@ section.dense { padding: 92px 0; }
 .rev-card.training .rev-band span { color: #a8d1f8; }
 .rev-card.conf .rev-band span { color: #d3c0f0; }
 
-.rev-body { padding: 38px 54px 62px; text-align: center; }
-.rev-body p { max-width: 420px; margin-left: auto; margin-right: auto; }
+.rev-body { padding: 38px 54px 56px; text-align: center; }
+/* hybrid: stat (number + headline) centered, explanation left-aligned with a subtle divider */
+.rev-body p { text-align: left; max-width: none; border-top: 1px solid var(--rule); margin-top: 24px; padding-top: 22px; }
 .rev-earn {
   font-family: 'JetBrains Mono', monospace;
   font-size: 22px;
@@ -1055,7 +1056,6 @@ footer p a:hover { color: var(--fmc-orange); }
       <div class="rev-card training">
         <div class="rev-band"><span>Courses</span></div>
         <div class="rev-body">
-          <div class="rev-earn">Earn</div>
           <div class="rev-pct">40<sup>%</sup></div>
           <h3>Revenue share on course registrations</h3>
           <p>Earned on every training registration you send to FMC, across Adobe, Apple, Avid, NVIDIA, Maxon, Blackmagic, Autodesk, and AI content creation.</p>
@@ -1064,7 +1064,6 @@ footer p a:hover { color: var(--fmc-orange); }
       <div class="rev-card conf">
         <div class="rev-band"><span>Conferences</span></div>
         <div class="rev-body">
-          <div class="rev-earn">Earn</div>
           <div class="rev-pct">15<sup>%</sup></div>
           <h3>Revenue share on conference registrations</h3>
           <p>Earned on every conference registration you send, including Post|Production World, AI Creative Summit, Immersive Media Summit, and the InfoComm ProVideo Summit.</p>
