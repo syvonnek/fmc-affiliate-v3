@@ -493,7 +493,7 @@ section.dense { padding: 92px 0; }
 
 
 /* How It Works - connected timeline */
-.steps-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:792px;margin:52px auto 0;position:relative}
+.steps-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:830px;margin:52px auto 0;position:relative}
 .steps-timeline .tl-line{position:absolute;top:23px;left:17%;right:17%;height:2px;background:linear-gradient(90deg,transparent,rgba(59,157,255,.5) 12%,rgba(59,157,255,.5) 88%,transparent)}
 .tl-step{text-align:center;position:relative;padding:0 10px}
 .tl-node{width:48px;height:48px;border-radius:50%;background:var(--fmc-orange);color:#0b1220;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 0 0 7px var(--bg-soft),0 6px 20px -4px rgba(59,157,255,.6);position:relative;z-index:2}
@@ -593,7 +593,7 @@ section.dense { padding: 92px 0; }
 .economics .rev-card.training,
 .economics .rev-card.conf { border-top-color: var(--fmc-orange); background: linear-gradient(180deg, rgba(59,157,255,0.08) 0%, transparent 60%), var(--bg-card); }
 .economics .rev-card.training .rev-band,
-.economics .rev-card.conf .rev-band { background: var(--fmc-orange); }
+.economics .rev-card.conf .rev-band { background: #54acff; }
 .economics .rev-card.training .rev-earn, .economics .rev-card.conf .rev-earn,
 .economics .rev-card.training .rev-pct sup, .economics .rev-card.conf .rev-pct sup { color: var(--fmc-orange); }
 .economics .rev-card .rev-band span { color: #0b1220; }
@@ -709,7 +709,7 @@ section.dense { padding: 92px 0; }
 .guarantee-text h3 em { font-style: normal; color: var(--fmc-orange); font-weight: 800; }
 .guarantee-text p { font-size: 16.5px; line-height: 1.55; color: var(--ink-muted); font-weight: 400; max-width: 470px; margin: 10px auto 0; text-wrap: balance; }
 .guarantee-text p strong { color: var(--ink); font-weight: 550; }
-.story-text p.guarantee-note { font-size: 14px; line-height:1.4; color: var(--ink-soft); font-style: italic; margin: 58px auto 0; text-align:center; white-space:nowrap; max-width:none; }
+.story-text p.guarantee-note { font-size: 15px; line-height:1.4; color: var(--ink-soft); font-style: italic; margin: 58px auto 0; text-align:center; white-space:nowrap; max-width:none; }
 @media(max-width:660px){ .story-text p.guarantee-note{ white-space:normal; font-size:10px; } }
 @media (max-width: 700px) {
   .guarantee-card { grid-template-columns: 1fr; padding: 42px 32px; gap: 28px; }
@@ -782,7 +782,7 @@ section.dense { padding: 92px 0; }
 .menu-content p { font-size: 17px; color: var(--ink-muted); line-height: 1.5; font-weight: 400; }
 .menu-arrow {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -994,7 +994,7 @@ footer p a:hover { color: var(--fmc-orange); }
 .alt-benefits{ border-top:2px dashed rgba(245,145,72,.4); }
 .orig-benefits .benefit{ background:transparent; border:none; padding:8px 30px; }
 .orig-benefits .benefit-icon{ width:auto; height:auto; margin:0 auto 18px; border:none; background:none; color:var(--fmc-orange); }
-.orig-benefits .benefit-icon svg{ width:52px; height:52px; }
+.orig-benefits .benefit-icon svg{ width:58px; height:58px; }
 @media(max-width:720px){ .orig-benefits .benefits-grid{ grid-template-columns:1fr; gap:44px; } }
 .alt-flag{ text-align:center; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--spark); background:rgba(245,145,72,.1); border:1px solid rgba(245,145,72,.4); border-radius:8px; padding:10px 16px; margin:0 auto 32px; width:max-content; max-width:100%; }
 
@@ -1063,6 +1063,16 @@ footer p a:hover { color: var(--fmc-orange); }
   .menu-row{ gap: 22px; }
   /* footer centered */
   .footer-inner{ flex-direction: column; text-align: center; justify-content: center; gap: 18px; }
+}
+@media(max-width:700px){
+  .menu-row{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; padding:30px 18px; }
+  .menu-logo{ margin:0; justify-content:center; }
+  .menu-logo img{ max-height:38px; }
+  .menu-logo.text-logo{ font-size:26px; }
+  .menu-content{ margin:0; }
+  .menu-content h4{ font-size:21px; margin-bottom:6px; }
+  .menu-content p{ font-size:14.5px; max-width:300px; margin:0 auto; text-wrap:balance; }
+  .menu-arrow{ display:inline-flex; font-size:13.5px; padding-right:0; margin-top:2px; }
 }
 </style>
 
@@ -1232,12 +1242,12 @@ footer p a:hover { color: var(--fmc-orange); }
     </div>
     <div class="benefits-grid">
       <div class="benefit">
-        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="7" width="12" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/></svg></div>
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="13" height="13" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
         <h4>Marketing-ready<br><em>materials</em></h4>
         <p>Approved course descriptions, graphics, email copy, and marketing resources, ready to use.</p>
       </div>
       <div class="benefit">
-        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><path d="M20 15v1.5a3.5 3.5 0 0 1-3.5 3.5H14"/><rect x="2.5" y="13" width="4" height="6" rx="2"/><rect x="17.5" y="13" width="4" height="6" rx="2"/></svg></div>
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a1 1 0 0 1-1-1v-6a9 9 0 0 1 18 0v6a1 1 0 0 1-1 1h-2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/><path d="M18 19v1a3 3 0 0 1-3 3h-3"/></svg></div>
         <h4>Dedicated<br><em>affiliate guidance</em></h4>
         <p>Work directly with an FMC contact for onboarding, program recommendations, and sales coordination.</p>
       </div>
@@ -1393,17 +1403,7 @@ footer p a:hover { color: var(--fmc-orange); }
 </script>
 <script>
 (function(){
-  // count-up on the About-FMC stats
-  function fmt(n){return n.toLocaleString('en-US');}
-  function run(el){
-    var to=parseInt(el.getAttribute('data-to'),10), suf=el.getAttribute('data-suffix')||'', t0=null, dur=1300;
-    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3); el.textContent=fmt(Math.round(e*to))+suf; if(p<1)requestAnimationFrame(step);}
-    requestAnimationFrame(step);
-  }
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){run(en.target);io.unobserve(en.target);}});},{threshold:.5});
-    [].forEach.call(document.querySelectorAll('.cup'),function(el){io.observe(el);});
-  }
+  /* stats count-up removed per request - numbers show statically */
   // subtle parallax on the hero logo grid
   var vg=document.querySelector('.vgrid');
   if(vg&&!window.matchMedia('(prefers-reduced-motion:reduce)').matches&&window.innerWidth>1000){
