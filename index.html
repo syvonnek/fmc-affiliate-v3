@@ -493,7 +493,7 @@ section.dense { padding: 92px 0; }
 
 
 /* How It Works - connected timeline */
-.steps-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px;position:relative}
+.steps-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:860px;margin:52px auto 0;position:relative}
 .steps-timeline .tl-line{position:absolute;top:23px;left:17%;right:17%;height:2px;background:linear-gradient(90deg,transparent,rgba(59,157,255,.5) 12%,rgba(59,157,255,.5) 88%,transparent)}
 .tl-step{text-align:center;position:relative;padding:0 10px}
 .tl-node{width:48px;height:48px;border-radius:50%;background:var(--fmc-orange);color:#0b1220;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 0 0 7px var(--bg-soft),0 6px 20px -4px rgba(59,157,255,.6);position:relative;z-index:2}
@@ -709,8 +709,8 @@ section.dense { padding: 92px 0; }
 .guarantee-text h3 em { font-style: normal; color: var(--fmc-orange); font-weight: 800; }
 .guarantee-text p { font-size: 16.5px; line-height: 1.55; color: var(--ink-muted); font-weight: 400; max-width: 524px; margin: 10px auto 0; text-wrap: pretty; }
 .guarantee-text p strong { color: var(--ink); font-weight: 550; }
-.guarantee-note { font-size: 10.5px; line-height:1.4; color: var(--ink-soft); font-style: italic; margin-top: 66px; text-align:center; white-space:nowrap; }
-@media(max-width:660px){ .guarantee-note{ white-space:normal; font-size:10.5px; } }
+.story-text p.guarantee-note { font-size: 10px; line-height:1.4; color: var(--ink-soft); font-style: italic; margin: 58px auto 0; text-align:center; white-space:nowrap; max-width:none; }
+@media(max-width:660px){ .story-text p.guarantee-note{ white-space:normal; font-size:10px; } }
 @media (max-width: 700px) {
   .guarantee-card { grid-template-columns: 1fr; padding: 42px 32px; gap: 28px; }
   .guarantee-text h3 { font-size: 34px; }
