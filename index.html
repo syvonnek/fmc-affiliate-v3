@@ -83,7 +83,7 @@ header {
 .site-nav a { color: var(--ink-muted); font-weight: 400; font-size: 15px; text-decoration: none; transition: color 0.15s; }
 .site-nav a:hover { color: var(--fmc-orange); }
 .site-nav .nav-apply { color: var(--spark); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; border-bottom: 1.5px solid transparent; padding-bottom: 1px; }
-.site-nav .nav-apply:hover { color: var(--spark); border-bottom-color: var(--spark); }
+.site-nav .nav-apply:hover { color: #ffb07a; border-bottom-color: transparent; }
 .site-nav .nav-apply .nav-arrow { font-size: 15px; line-height: 1; }
 /* Hamburger - hidden on desktop, shown below 900px */
 .nav-toggle {
@@ -247,7 +247,7 @@ section.dense { padding: 92px 0; }
 .hero p.deck.deck-emph { font-size: 20px; max-width: 100%; margin-bottom: 0; }
 /* Option 03 - accent bar: a glowing blue rule flags the key promise so the eye lands on it */
 .deck-emph-wrap { display: flex; gap: 15px; align-items: stretch; max-width: 660px; margin-top: 13px; margin-bottom: 32px; }
-.deck-emph-wrap .emph-bar { width: 4px; flex: none; border-radius: 3px; background: var(--fmc-orange); box-shadow: 0 0 18px 0 rgba(59,157,255,0.55); margin: 2px 0 0; }
+.deck-emph-wrap .emph-bar { width: 4px; flex: none; border-radius: 3px; background: var(--fmc-orange); box-shadow: 0 0 18px 0 rgba(59,157,255,0.55); margin: 3px 0 0; }
 .deck-emph-wrap .deck-emph { margin-bottom: 0; }
 .hero p.deck.deck-emph strong.hi { display: inline-block; margin-top: 2px; }
 .hero p.deck strong { color: var(--ink); font-weight: 400; }  /* 230 requested; Instrument Sans floor is 400 */
@@ -276,6 +276,8 @@ section.dense { padding: 92px 0; }
 /* hero primary CTA only - heavier + a touch more internal gap */
 .hero-ctas .btn-orange { font-weight: 700; gap: 6px; }
 .hero-ctas .btn-orange .btn-arrow { position: relative; top: 1px; }
+.cta-ctas .btn-orange { font-weight: 700; gap: 6px; }
+.cta-ctas .btn-orange .btn-arrow { position: relative; top: 1px; }
 .btn-arrow { font-size: 15px; line-height: 1; display: block; transition: transform 0.18s; }
 .btn:hover .btn-arrow { transform: translateX(3px); }
 
@@ -521,7 +523,7 @@ section.dense { padding: 92px 0; }
    Text is lightened - raw brand blue/purple only hit 3.40:1 on the tinted band. */
 .rev-band {
   padding: 16px 54px;
-  border-bottom: 2px solid rgba(120,190,255,0.7);
+  border-bottom: 2px solid rgba(59,157,255,0.9);
   text-align: center;
 }
 .rev-card.training .rev-band { background: rgba(59, 138, 217, 0.13); }
@@ -539,6 +541,7 @@ section.dense { padding: 92px 0; }
 .rev-body { padding: 38px 44px 26px; text-align: center; }
 /* everything centered; a short centered rule separates the stat from the detail */
 .rev-body p { text-align: center; max-width: 465px; margin: 0 auto; text-wrap: wrap; }
+.rev-card.conf .rev-body p { max-width: 505px; }
 .rev-body .rev-div { width: 66%; height: 1px; background: var(--rule); margin: 22px auto 20px; }
 .rev-earn {
   font-family: 'JetBrains Mono', monospace;
@@ -704,7 +707,7 @@ section.dense { padding: 92px 0; }
   color: var(--ink);
 }
 .guarantee-text h3 em { font-style: normal; color: var(--fmc-orange); font-weight: 800; }
-.guarantee-text p { font-size: 16.5px; line-height: 1.55; color: var(--ink-muted); font-weight: 400; max-width: 500px; margin: 0 auto; }
+.guarantee-text p { font-size: 16.5px; line-height: 1.55; color: var(--ink-muted); font-weight: 400; max-width: 524px; margin: 10px auto 0; text-wrap: pretty; }
 .guarantee-text p strong { color: var(--ink); font-weight: 550; }
 .guarantee-note { font-size: 10.5px; line-height:1.4; color: var(--ink-soft); font-style: italic; margin-top: 66px; text-align:center; white-space:nowrap; }
 @media(max-width:660px){ .guarantee-note{ white-space:normal; font-size:10.5px; } }
@@ -831,7 +834,7 @@ section.dense { padding: 92px 0; }
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.04em;
-  background: linear-gradient(180deg, #86c8ff 0%, #3b9dff 55%, #1f82ea 100%);
+  background: linear-gradient(180deg, #d4f0ff 0%, #7cc4ff 55%, #4aa6ff 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   margin-bottom: 8px;
 }
@@ -1099,7 +1102,7 @@ footer p a:hover { color: var(--fmc-orange); }
 <section class="economics">
   <div class="container">
     <div class="section-header">
-      <h2>What you earn as an <em>FMC Affiliate.</em></h2>
+      <h2>What you earn <em>as an FMC Affiliate.</em></h2>
     </div>
     <div class="rev-grid">
       <div class="rev-card training">
@@ -1168,28 +1171,14 @@ footer p a:hover { color: var(--fmc-orange); }
     </div>
     <div class="benefits-grid">
       <div class="benefit">
-        <h4>Referral<br><em>earnings</em></h4>
-        <p>Earn 40% on FMC courses and 15% on conferences you refer.</p>
-      </div>
-      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l14-6v14L3 13z"/><path d="M17 8a3 3 0 0 1 0 8"/><path d="M6 13v4a2 2 0 0 0 2 2h1"/></svg></div>
         <h4>Marketing-ready<br><em>materials</em></h4>
         <p>Approved course descriptions, graphics, email copy, and marketing resources, ready to use.</p>
       </div>
       <div class="benefit">
-        <h4>End-to-end<br><em>delivery</em></h4>
-        <p>FMC manages registration, scheduling, instruction, delivery, and participant support.</p>
-      </div>
-      <div class="benefit">
-        <h4>Co-branded<br><em>support</em></h4>
-        <p>Reach your audience through approved affiliate materials and co-branded experiences.</p>
-      </div>
-      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="16 8 10.8 10.8 8 16 13.2 13.2 16 8"/></svg></div>
         <h4>Dedicated<br><em>affiliate guidance</em></h4>
-        <p>Work directly with an FMC contact for onboarding, recommendations, and sales coordination.</p>
-      </div>
-      <div class="benefit">
-        <h4>Established<br><em>training portfolio</em></h4>
-        <p>Add a recognized provider with 30+ years of instructor-led training to your offering.</p>
+        <p>Work directly with an FMC contact for onboarding, program recommendations, and sales coordination.</p>
       </div>
     </div>
   </div>
