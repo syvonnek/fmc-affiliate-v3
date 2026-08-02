@@ -53,6 +53,8 @@ body {
    pretty  = only fix the tail (correct for long prose) */
 h1, h2, h3, h4,
 .aud-headline, .lockup-title { text-wrap: balance; }
+.benefit-icon{ width:56px; height:56px; margin:0 auto 20px; border:1px solid rgba(59,157,255,.35); border-radius:14px; display:flex; align-items:center; justify-content:center; color:var(--blue); background:rgba(59,157,255,.07); }
+.benefit-icon svg{ width:28px; height:28px; }
 .benefit h4 { text-wrap: wrap; }
 p, li { text-wrap: pretty; }
 .hero p.deck, .section-header .lede, .cta p,
@@ -659,7 +661,7 @@ section.dense { padding: 92px 0; }
 @media (max-width: 1240px) { .benefits-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 760px) { .benefits-grid { grid-template-columns: 1fr; } }
 /* the reinstated Jeff-reviewed set keeps its original 3-per-row layout */
-.orig-benefits .benefits-grid { grid-template-columns: repeat(2, 1fr); max-width: 780px; }
+.orig-benefits .benefits-grid { grid-template-columns: repeat(2, 1fr); max-width: 860px; gap: 48px; }
 @media (max-width: 1080px) { .orig-benefits .benefits-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 720px) { .orig-benefits .benefits-grid { grid-template-columns: 1fr; } }
 
@@ -818,7 +820,7 @@ section.dense { padding: 92px 0; }
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.04em;
-  background: linear-gradient(180deg, #d6f4ff 0%, #6bb8ff 55%, #3b9dff 100%);
+  background: linear-gradient(180deg, #eaf3ff 0%, #9cc4ee 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   margin-bottom: 8px;
 }
@@ -976,7 +978,10 @@ footer p a:hover { color: var(--fmc-orange); }
 .faq-item p{ padding:0 4px 24px; font-size:16px; line-height:1.6; color:var(--ink-muted); max-width:680px; }
 /* alt benefit titles - review only */
 .alt-benefits{ border-top:2px dashed rgba(245,145,72,.4); }
-.orig-benefits{ border-top:2px dashed rgba(59,157,255,.45); }
+.orig-benefits .benefit{ background:transparent; border:none; padding:8px 30px; }
+.orig-benefits .benefit-icon{ width:84px; height:84px; margin:0 auto 26px; border:none; border-radius:24px; background:rgba(59,157,255,.09); }
+.orig-benefits .benefit-icon svg{ width:46px; height:46px; }
+@media(max-width:720px){ .orig-benefits .benefits-grid{ grid-template-columns:1fr; gap:44px; } }
 .alt-flag{ text-align:center; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--spark); background:rgba(245,145,72,.1); border:1px solid rgba(245,145,72,.4); border-radius:8px; padding:10px 16px; margin:0 auto 32px; width:max-content; max-width:100%; }
 </style>
 
@@ -1157,10 +1162,12 @@ footer p a:hover { color: var(--fmc-orange); }
     </div>
     <div class="benefits-grid">
       <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5"/></svg></div>
         <h4>Marketing-ready<br><em>materials</em></h4>
         <p>Approved course descriptions, graphics, email copy, and marketing resources, ready to use.</p>
       </div>
       <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="6" rx="1.7"/><rect x="17.5" y="13" width="4" height="6" rx="1.7"/><path d="M21.5 19v.4a3 3 0 0 1-3 3H13"/></svg></div>
         <h4>Dedicated<br><em>affiliate guidance</em></h4>
         <p>Work directly with an FMC contact for onboarding, program recommendations, and sales coordination.</p>
       </div>
@@ -1168,49 +1175,7 @@ footer p a:hover { color: var(--fmc-orange); }
   </div>
 </section>
 
-<!-- PARTNER PACKAGE (current - Jordan edits) -->
-<section class="benefits">
-  <div class="container">
-    <div class="section-header">
-      <h2>Everything you need to<br><em>grow as an affiliate.</em></h2>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit">
-        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
-        <h4>Simple<br><em>referral process</em></h4>
-        <p>Share FMC programs with your audience. FMC handles enrollment, payment, and everything after the referral.</p>
-      </div>
-      <div class="benefit">
-        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
-        <h4>Full Service<br><em>Support</em></h4>
-        <p>FMC manages registration, scheduling, instruction, and delivery, plus a dedicated contact for onboarding and sales coordination.</p>
-      </div>
-      <div class="benefit">
-        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-        <h4>Ready-to-use<br><em>resources</em></h4>
-        <p>Use approved course descriptions, graphics, email copy, and marketing materials to present FMC programs professionally.</p>
-      </div>
-      <div class="benefit">
-        <div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h4>Co-branded<br><em>support</em></h4>
-        <p>Extend the FMC offering to your audience through approved affiliate materials and co-branded experiences.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ALT BENEFIT TITLES - FOR JEFF REVIEW (delete after) -->
-<section class="benefits alt-benefits">
-  <div class="container">
-    <div class="alt-flag">Alternate card titles &mdash; for Jeff to review (remove after)</div>
-    <div class="benefits-grid">
-      <div class="benefit"><div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h4>Sales-ready<br><em>materials</em></h4><p>Approved course descriptions, graphics, email copy, and marketing resources, ready to use.</p></div>
-      <div class="benefit"><div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div><h4>Dedicated<br><em>affiliate guidance</em></h4><p>Work with an FMC contact for onboarding, program recommendations, and coordination.</p></div>
-      <div class="benefit"><div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4>Co-branded<br><em>opportunities</em></h4><p>Extend the FMC offering to your audience through approved co-branded materials.</p></div>
-      <div class="benefit"><div class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><h4>Established<br><em>training portfolio</em></h4><p>Add a recognized training provider with 30+ years of programs to what you already offer.</p></div>
-    </div>
-  </div>
-</section>
 
 <!-- CATALOG -->
 <section class="catalog" id="catalog">
