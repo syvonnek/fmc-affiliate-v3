@@ -488,6 +488,17 @@ section.dense { padding: 92px 0; }
 .step-card p { font-size: 20px; line-height: 1.2; min-height: calc(1.5em * 1); color: var(--ink-muted); font-weight: 400; }
 @media (max-width: 900px) { .steps-grid { grid-template-columns: 1fr; } }
 
+
+
+/* How It Works - connected timeline */
+.steps-timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px;position:relative}
+.steps-timeline .tl-line{position:absolute;top:23px;left:17%;right:17%;height:2px;background:linear-gradient(90deg,transparent,rgba(59,157,255,.5) 12%,rgba(59,157,255,.5) 88%,transparent)}
+.tl-step{text-align:center;position:relative;padding:0 10px}
+.tl-node{width:48px;height:48px;border-radius:50%;background:var(--fmc-orange);color:#0b1220;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 0 0 7px var(--bg-soft),0 6px 20px -4px rgba(59,157,255,.6);position:relative;z-index:2}
+.tl-step h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:31px;font-weight:800;letter-spacing:-.01em;color:var(--ink);line-height:1.05;margin:0}
+.tl-step p{font-size:19px;color:var(--ink-muted);margin-top:7px;font-weight:400}
+@media(max-width:820px){.steps-timeline{grid-template-columns:1fr;gap:30px}.steps-timeline .tl-line{display:none}}
+
 /* Economics */
 .economics { background: var(--bg-deep); }   /* dark section so the light rev-cards contrast */
 .rev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px; }
@@ -510,7 +521,7 @@ section.dense { padding: 92px 0; }
    Text is lightened - raw brand blue/purple only hit 3.40:1 on the tinted band. */
 .rev-band {
   padding: 16px 54px;
-  border-bottom: 1px solid rgba(255,255,255,0.22);
+  border-bottom: 1.5px solid rgba(90,170,255,0.55);
   text-align: center;
 }
 .rev-card.training .rev-band { background: rgba(59, 138, 217, 0.13); }
@@ -1075,22 +1086,11 @@ footer p a:hover { color: var(--fmc-orange); }
       <div class="marker-eyebrow" style="justify-content:center">How it works</div>
       <h2>Become an FMC Affiliate<br><em>and start earning.</em></h2>
     </div>
-    <div class="steps-grid hiw-grid">
-      <div class="step-card">
-        <div class="step-num">Step 1</div>
-        <h3>You promote</h3>
-        <p>FMC programs.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">Step 2</div>
-        <h3>We handle</h3>
-        <p>fulfillment.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">Step 3</div>
-        <h3>You earn</h3>
-        <p>on every registration.</p>
-      </div>
+    <div class="steps-timeline">
+      <div class="tl-line"></div>
+      <div class="tl-step"><div class="tl-node">1</div><h3>You promote</h3><p>FMC programs.</p></div>
+      <div class="tl-step"><div class="tl-node">2</div><h3>We handle</h3><p>fulfillment.</p></div>
+      <div class="tl-step"><div class="tl-node">3</div><h3>You earn</h3><p>on every registration.</p></div>
     </div>
   </div>
 </section>
@@ -1108,7 +1108,7 @@ footer p a:hover { color: var(--fmc-orange); }
           <div class="rev-pct">40<sup>%</sup></div>
           <h3>on course registrations</h3>
           <div class="rev-div"></div>
-          <p>Earned on training registrations you send to FMC, across Adobe, Apple, Avid, NVIDIA, Maxon, Blackmagic, Autodesk, and AI content creation.</p>
+          <p>Earned on training registrations you send to FMC,<br>across Adobe, Apple, Avid, NVIDIA, Maxon, Blackmagic, Autodesk, and AI content creation.</p>
         </div>
       </div>
       <div class="rev-card conf">
@@ -1137,9 +1137,9 @@ footer p a:hover { color: var(--fmc-orange); }
         <p>FMC offers training on leading software including Adobe, Apple, Avid, NVIDIA, Maxon, <span class="nb">Blackmagic Design</span>, and Autodesk, and produces major industry events including Post|Production World.</p>
         <p>Affiliates add a recognized training provider to their portfolio, backed by experienced instructors, established programs, and end-to-end delivery.*</p>
         <div class="story-stats">
-          <div class="story-stat"><div class="n">40+</div><div class="l">Client countries</div></div>
-          <div class="story-stat"><div class="n">160+</div><div class="l">Expert-led courses</div></div>
-          <div class="story-stat"><div class="n">10,000+</div><div class="l">Professionals trained</div></div>
+          <div class="story-stat"><div class="n cup" data-to="40" data-suffix="+">40+</div><div class="l">Client countries</div></div>
+          <div class="story-stat"><div class="n cup" data-to="160" data-suffix="+">160+</div><div class="l">Expert-led courses</div></div>
+          <div class="story-stat"><div class="n cup" data-to="10000" data-suffix="+">10,000+</div><div class="l">Professionals trained</div></div>
         </div>
         <div class="guarantee-card story-guarantee" style="margin-top:84px">
           <div class="guarantee-seal">
@@ -1328,7 +1328,7 @@ footer p a:hover { color: var(--fmc-orange); }
   <script>
 (function(){
   if(!('IntersectionObserver' in window))return;
-  var sel='.section-header,.aud-headline,.step-card,.rev-card,.benefit,.menu-row,.guarantee-card,.story-stats,.who-for';
+  var sel='.section-header,.aud-headline,.tl-step,.rev-card,.benefit,.menu-row,.guarantee-card,.story-stats,.who-for';
   var els=[].slice.call(document.querySelectorAll(sel));
   els.forEach(function(e){
     e.classList.add('reveal');
@@ -1339,6 +1339,30 @@ footer p a:hover { color: var(--fmc-orange); }
   });
   var io=new IntersectionObserver(function(ents){ents.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(e){io.observe(e);});
+})();
+</script>
+<script>
+(function(){
+  // count-up on the About-FMC stats
+  function fmt(n){return n.toLocaleString('en-US');}
+  function run(el){
+    var to=parseInt(el.getAttribute('data-to'),10), suf=el.getAttribute('data-suffix')||'', t0=null, dur=1300;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); var e=1-Math.pow(1-p,3); el.textContent=fmt(Math.round(e*to))+suf; if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){run(en.target);io.unobserve(en.target);}});},{threshold:.5});
+    [].forEach.call(document.querySelectorAll('.cup'),function(el){io.observe(el);});
+  }
+  // subtle parallax on the hero logo grid
+  var vg=document.querySelector('.vgrid');
+  if(vg&&!window.matchMedia('(prefers-reduced-motion:reduce)').matches&&window.innerWidth>1000){
+    var ticking=false;
+    window.addEventListener('scroll',function(){
+      if(ticking)return; ticking=true;
+      requestAnimationFrame(function(){ var y=window.scrollY; if(y<900){vg.style.transform='translateY('+(y*-0.04)+'px)';} ticking=false; });
+    },{passive:true});
+  }
 })();
 </script>
 </body>
