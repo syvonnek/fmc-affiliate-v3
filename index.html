@@ -1089,6 +1089,32 @@ footer p a:hover { color: var(--fmc-orange); }
   .menu-content p{ font-size:14.5px; max-width:300px; margin:0 auto; text-wrap:balance; }
   .menu-arrow{ display:inline-flex; font-size:13.5px; padding-right:0; margin-top:2px; }
 }
+.mob-br{display:none}
+@media (max-width: 600px) {
+  /* hero: nudge each element down + one size up */
+  .hero-eyebrow { font-size: 13px; margin-top: 3px; }
+  .hero h1 { font-size: 40px; margin-top: 3px; }
+  .hero p.deck { font-size: 18px; }
+  .hero p.deck.deck-lead { margin-top: 3px; }
+  /* audience labels a touch bigger */
+  .aud-chips { font-size: 12px; }
+  /* how it works: pull the 1-2-3 steps up */
+  .steps-timeline { margin-top: 44px; }
+  /* what you earn: less space under the title */
+  .economics .section-header { margin-bottom: 42px; }
+  /* earn-card dividers: brighter, thicker, wider */
+  .rev-body .rev-div { width: 82%; height: 2px; background: rgba(255,255,255,0.24); }
+  /* about-fmc stats: bigger numbers + label, more space between */
+  .story-stats { gap: 27px; }
+  .story-stat .n { font-size: 46px; }
+  .story-stat .l { font-size: 14.5px; }
+  /* dedicated affiliate guidance up ~5px */
+  .orig-benefits .benefits-grid { gap: 21px; }
+  /* AI hero logo: smaller / balanced with the others */
+  .vcell img[alt="AI Training & Certifications"] { max-height: 22px; max-width: 62%; }
+  /* guarantee heading breaks to two lines */
+  .mob-br { display: inline; }
+}
 </style>
 
 </head>
@@ -1238,7 +1264,7 @@ footer p a:hover { color: var(--fmc-orange); }
             </svg>
           </div>
           <div class="guarantee-text">
-            <h3>Sell with <em>complete confidence.</em></h3>
+            <h3>Sell with<br class="mob-br"> <em>complete confidence.</em></h3>
             <p>FMC programs are backed by FMC's <strong class="nb">satisfaction guarantee</strong> and taught by experienced working professionals.</p>
           </div>
         </div>
